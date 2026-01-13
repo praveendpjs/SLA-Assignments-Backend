@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Task2 {
+public class Task3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -18,16 +18,14 @@ public class Task2 {
                 matrix1[i][j] = sc.nextInt();
             }
         }
-        int max = matrix1[0][0];
 
         for (int i = 0; i < rows; i++) {
+            int rowSum = 0; 
             for (int j = 0; j < cols; j++) {
-                if(matrix1[i][j] > max){
-                    max = matrix1[i][j];
-                }
+                rowSum += matrix1[i][j];
             }
+            System.out.println("Sum of row " + (i + 1) + " = " + rowSum);
         }
-        System.out.println("The greatest number in 2D array is " + max);
         sc.close();
     }
 }
