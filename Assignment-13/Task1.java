@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Task1 {
     public static void main(String[] args) {
 	    	Stack<Character> stack = new Stack<>();
